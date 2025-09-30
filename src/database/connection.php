@@ -3,7 +3,7 @@
 class ConexionDB{
     public static function setConnection(){
         $host = "localhost"; // 127.0.0.1
-        $dbname = 'papeleria3a';
+        $dbname = 'lapicito';
         $user = 'root';
         $pass = 'root';
         $charset = 'utf8mb4';        

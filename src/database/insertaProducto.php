@@ -2,14 +2,14 @@
 
 header('Content-Type: application/json'); 
 require_once 'connection.php'; 
-tr
+
+try{
     $conn = ConexionDB::setConnection();
     $entrada = json_decode(file_get_contents('php://input'), true);
 
     $tabla=$entrada['tabla'] ?? null;
     $datosFormulario=$entrada['datosFormulario'] ?? [];
 
-    $campos = ['codigobarra', 'nombre', 'precio', 'existencia', 'idmarca', 'idcategoria'];
     $mapeo = [
     'codigobarra' => 'txtCodigoBarra',
     'nombre'      => 'txtNombre',
@@ -53,7 +53,7 @@ catch(Exception $e) {
     echo json_encode(["error" => "Error: " . $e->getMessage()]);
 } 
 
-?>tion $e) {
+catch(Exception $e) {
     echo json_encode(["error" => "Error: " . $e->getMessage()]);
 } 
 
