@@ -2,8 +2,7 @@
 
 header('Content-Type: application/json'); 
 require_once 'connection.php'; 
-try {
-
+tr
     $conn = ConexionDB::setConnection();
     $entrada = json_decode(file_get_contents('php://input'), true);
 
@@ -54,4 +53,9 @@ catch(Exception $e) {
     echo json_encode(["error" => "Error: " . $e->getMessage()]);
 } 
 
+?>tion $e) {
+    echo json_encode(["error" => "Error: " . $e->getMessage()]);
+} 
+
 ?>
+
